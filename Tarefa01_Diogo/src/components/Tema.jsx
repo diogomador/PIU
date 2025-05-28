@@ -1,9 +1,11 @@
 import { useState } from 'react';
 
 export default function Tema() {
+    // Variável (cor...) e função que vai alterar/atualizar a variável(set...), isso é o 'useState' 
     const [corAtual, setCorAtual] = useState('white');
     const [corTexto, setCorTexto] = useState('black');
 
+    // Pode ser chamado de toggle também (toggleTheme) por exemplo.
     function handleColor() {
         const novaCor = corAtual === 'white' ? 'black' : 'white';
         const novaCorTexto = corTexto === 'black' ? 'white' : 'black';
