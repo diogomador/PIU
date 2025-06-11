@@ -1,0 +1,14 @@
+.btn_add,.btn_rem {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.grande {
+    transform: scale(1.5);
+}
+
+.pequeno {
+    transform: scale(0.7);
+}
+ 
