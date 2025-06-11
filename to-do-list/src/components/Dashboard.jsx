@@ -14,7 +14,7 @@ export default function Dashboard({ children }) {
   // Define o componente Dashboard que pode receber conteúdo via 'children'
 
   return (
-    <div>
+    <div className="dashboard">
       <h2>Minha Lista de Tarefas</h2> 
       {/* Título fixo para o dashboard */}
 

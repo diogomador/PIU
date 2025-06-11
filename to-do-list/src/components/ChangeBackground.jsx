@@ -4,21 +4,21 @@ import { useState } from 'react';
 export default function ChangeBackground() { 
   // Define o componente funcional ChangeBackground que será exportado
 
-  const [corAtual, setCorAtual] = useState('white'); 
+  const [corAtual, setCorAtual] = useState('#f5f5f5'); 
   // Cria um estado chamado corAtual para guardar a cor de fundo atual da página
-  // Inicialmente o fundo é branco ('white')
+  // Inicialmente o fundo é branco ('#f5f5f5')
 
-  const [corTexto, setCorTexto] = useState('black'); 
+  const [corTexto, setCorTexto] = useState('#1e1e2f'); 
   // Cria um estado chamado corTexto para guardar a cor do texto atual da página
-  // Inicialmente o texto é preto ('black')
+  // Inicialmente o texto é preto ('#1e1e2f')
 
   function handleColor() { 
     // Função que será chamada quando o usuário clicar no botão para mudar o tema
 
-    const novaCor = corAtual === 'white' ? 'black' : 'white'; 
+    const novaCor = corAtual === '#f5f5f5' ? '#1e1e2f' : '#f5f5f5'; 
     // Se o fundo atual é branco, a nova cor será preta, e vice-versa
 
-    const novaCorTexto = corTexto === 'black' ? 'white' : 'black'; 
+    const novaCorTexto = corTexto === '#1e1e2f' ? '#f5f5f5' : '#1e1e2f'; 
     // Se o texto atual é preto, a nova cor será branca, e vice-versa
 
     document.body.style.backgroundColor = novaCor; 
@@ -37,7 +37,7 @@ export default function ChangeBackground() {
   function nomeCor() { 
     // Função que retorna o nome do tema para mostrar no botão
 
-    return corAtual === 'white' ? 'Escuro' : 'Claro'; 
+    return corAtual === '#f5f5f5' ? 'Escuro' : 'Claro'; 
     // Se o fundo é branco, o botão mostrará que ao clicar muda para o tema Escuro
     // Caso contrário, muda para o tema Claro
   }
