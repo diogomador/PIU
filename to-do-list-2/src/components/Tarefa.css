@@ -1,0 +1,95 @@
+body {
+  font-family: cursive;
+  background: lightgray;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  margin: 0;
+}
+
+h2 {
+  color: black;
+}
+
+div {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  max-width: 800px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+label span {
+  font-weight: 600;
+  color: dimgray;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input[type="text"] {
+  padding: 12px 15px;
+  border: 2px solid gainsboro;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: dodgerblue;
+  box-shadow: 0 0 8px rgba(30, 144, 255, 0.3);
+}
+
+button {
+  margin-bottom: 20px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: dodgerblue;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: royalblue;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  max-height: 250px;
+  overflow-y: auto;
+  border-top: 1px solid whitesmoke;
+}
+
+ul li {
+  padding: 12px 15px;
+  border-bottom: 1px solid whitesmoke;
+  font-size: 16px;
+  color: dimgray;
+  transition: background-color 0.2s ease;
+}
+
+ul li:hover {
+  background-color: whitesmoke;
+  cursor: default;
+}
