@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+    color: black;
+    padding: 2rem;
+}
+
+h2 {
+    font-size: 3.0rem;
+    text-align: center;
+    color: darkblue;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+}
+
+form input,
+form select {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 2px solid gray;
+    margin-top: 0.3rem;
+    background-color: white;
+}
+
+/* botão adicionar */
+form button {
+    padding: 0.6rem 1.2rem;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: darkgreen;
+}
+
+/* lista de tarefas */
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+li {
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+li strong {
+    color: darkorange;
+}
+
+/* botões de status e mover */
+li button {
+    margin: 0.3rem;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* cores específicas */
+li button:nth-child(1) { background-color: green; color: white; }
+li button:nth-child(2) { background-color: red; color: white; }
+li button:nth-child(3) { background-color: orange; color: white; }
+li button:nth-child(4) { background-color: blue; color: white; }
+li button:nth-child(5) { background-color: blue; color: white; }
+li button:nth-child(6) { background-color: brown; color: white; }
+
+li button:hover {
+    opacity: 0.8;
+}
+
+/* botão reset */
+button[onClick] {
+    display: block;
+    margin: 2rem auto;
+    padding: 0.8rem 1.5rem;
+    background-color: navy;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button[onClick]:hover {
+    background-color: darkblue;
+}
+
+.conquistas-container {
+    max-width: 700px;
+    margin: 2rem auto;
+    background-color: white;
+    border: 2px solid darkgray;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.conquistas-container h3 {
+    text-align: center;
+    color: purple;
+}
+
+.conquistas-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.conquistas-container li {
+    background-color: lightyellow;
+    border: 1px solid goldenrod;
+    color: darkgoldenrod;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.95rem;
+}
