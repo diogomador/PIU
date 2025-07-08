@@ -1,3 +1,5 @@
+import './Buscador.css'
+
 export default function Buscador({
     buscaTermo,
     setBuscaTermo,

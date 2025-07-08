@@ -1,3 +1,5 @@
+import './Conquistas.css'
+
 export default function Conquistas({ conquistas }) {
   return (
     <div style={{ marginTop: "2rem" }}>
