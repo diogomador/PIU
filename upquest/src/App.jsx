@@ -80,7 +80,7 @@ export default function App() {
     setLista(novaLista);
   }
 
-  // move a tarefa para cima ou para baixo na lista
+  // move a tarefa para cima (direção -1) ou para baixo (direção +1) na lista
   function moverTarefa(index, direcao) {
     const novaLista = [...lista];
     const novoIndex = index + direcao;
