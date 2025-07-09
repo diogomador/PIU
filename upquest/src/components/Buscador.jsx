@@ -17,7 +17,7 @@ export default function Buscador({
     }
 
     return (
-        <form onSubmit={handleSubmit} style={{ marginTop: "2rem", textAlign: "center" }}>
+        <form onSubmit={handleSubmit} style={{ marginTop: "2rem", textAlign: "center"}}>
             <input
                 type="text"
                 placeholder="Digite um termo para buscar..."
@@ -27,7 +27,7 @@ export default function Buscador({
                     padding: "0.5rem",
                     borderRadius: "5px",
                     border: "1px solid #444",
-                    width: "60%",
+                    width: "19%",
                     marginRight: "1rem"
                 }}
             />
