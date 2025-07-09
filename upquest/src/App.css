@@ -5,16 +5,6 @@ body {
     padding: 2rem;
 }
 
-div button{
-  border: 1px solid white;
-  background-color: rgb(255, 0, 0);
-  color: white;
-  height: 40px;
-  padding: 10px;
-  border-radius: 5px;
-  
-}
-
 h2 {
     font-size: 3.0rem;
     text-align: center;
@@ -24,20 +14,15 @@ h2 {
 
 form {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     gap: 1rem;
     margin-bottom: 2rem;
-    text-align: center;
 }
 
 form label {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
     font-size: 1rem;
 }
 
@@ -58,7 +43,6 @@ form button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    height: 60%;
 }
 
 form button:hover {
@@ -91,6 +75,7 @@ li button {
     padding: 0.4rem 0.8rem;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 /* cores específicas */
@@ -150,5 +135,3 @@ button[onClick]:hover {
     border-radius: 5px;
     font-size: 0.95rem;
 }
-
-

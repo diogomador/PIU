@@ -1,4 +1,4 @@
-import "./App.css" 
+import "./App.css" // ainda não tem nada
 import { useState } from 'react';
 import Conquistas from "./components/Conquistas";
 import Buscador from "./components/Buscador"
@@ -6,7 +6,7 @@ import Buscador from "./components/Buscador"
 export default function App() {
   // catálogo das conquistas, cada uma com a quantidade necessária e o nome
   const conquistasCatalogo = [
-    { qtd: 5, nome: 'Criador Iniciante'},
+    { qtd: 5, nome: 'Criador Iniciante' },
     { qtd: 10, nome: 'Criador Bronze' },
     { qtd: 15, nome: 'Criador Prata' },
     { qtd: 20, nome: 'Criador Ouro' },
