@@ -68,8 +68,15 @@ export default function App() {
     }
   }
 
-  // função para resetar a lista de tarefas (mas não o contador total ou conquistas)
+  // Função para resetar a lista de tarefas (não zera o contador total nem as conquistas)
   function handleReset() {
+    // Exibe uma janela de confirmação antes de apagar todas as tarefas
+    const confirmar = window.confirm("Tem certeza que deseja resetar todas as tarefas?");
+
+    // Se o usuário clicar em "Cancelar", a função para por aqui
+    if (!confirmar) return;
+
+    // Se o usuário confirmar, a lista de tarefas é esvaziada
     setLista([]);
   }
 
@@ -93,12 +100,21 @@ export default function App() {
     setLista(novaLista);
   }
   
-  // função para excluir uma tarefa da lista
+  // Função para excluir uma tarefa da lista
   function excluirTarefa(index) {
+    // Exibe uma janela de confirmação antes de excluir a tarefa
+    const confirmar = window.confirm("Tem certeza que deseja excluir essa tarefa?");
+    
+    // Se o usuário cancelar, a função termina sem excluir
+    if (!confirmar) return;
+
+    // Cria uma nova lista sem a tarefa que será excluída
     const novaLista = lista.filter((_, i) => i !== index);
-    setLista(novaLista); // adiciona a nova lista, sem o elemento removido, à lista original
+    
+    // Atualiza o estado com a nova lista
+    setLista(novaLista);
   }
-  
+
   return (
     <div>
       <img src={logo} alt="Logo UpQuest" className="logo" />
