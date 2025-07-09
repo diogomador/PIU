@@ -27,9 +27,9 @@ export default function App() {
   const [prioridade, setPrioridade] = useState(""); // prioridade da tarefa 
   const [conquistas, setConquistas] = useState([]); // conquistas desbloqueadas
   const [contadorTotal, setContadorTotal] = useState(0); // total acumulado de tarefas criadas
-  const [buscaTermo, setBuscaTermo] = useState("");
-  const [filtroAtivo, setFiltroAtivo] = useState("");
-  const [filtroPrioridade, setFiltroPrioridade] = useState("Todas");
+  const [buscaTermo, setBuscaTermo] = useState(""); //captura do que está sendo inserido no input
+  const [filtroAtivo, setFiltroAtivo] = useState(""); //termo do input que será usado de fato
+  const [filtroPrioridade, setFiltroPrioridade] = useState("Todas"); // filtro de prioridade selecionado
 
   // função chamada ao enviar o formulário
   function handleSubmit(e) {
@@ -96,7 +96,7 @@ export default function App() {
   // função para excluir uma tarefa da lista
   function excluirTarefa(index) {
     const novaLista = lista.filter((_, i) => i !== index);
-    setLista(novaLista);
+    setLista(novaLista); // adiciona a nova lista, sem o elemento removido, à lista original
   }
   
   return (
@@ -140,10 +140,10 @@ export default function App() {
       <ul>
         {lista.filter((item) => {
           const passaBusca =
-          filtroAtivo === "" || item.nome.toLowerCase().includes(filtroAtivo.toLowerCase());
+          filtroAtivo === "" || item.nome.toLowerCase().includes(filtroAtivo.toLowerCase()); //verifica compatibilidade com o input de busca
           const passaPrioridade =
           filtroPrioridade === "Todas" || item.prioridade === filtroPrioridade;
-          return passaBusca && passaPrioridade;
+          return passaBusca && passaPrioridade; // verifica compatibilidade com o select de prioridades
         })
         .map((item, i) => {
           // Renderização diferente para lista filtrada

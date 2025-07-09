@@ -1,18 +1,18 @@
 export default function Buscador({
     buscaTermo,
     setBuscaTermo,
-    setFiltroAtivo,
+    setFiltroAtivo, // props
     filtroPrioridade,
     setFiltroPrioridade
 }) {
     function handleSubmit(e) {
         e.preventDefault();
-        setFiltroAtivo(buscaTermo.trim());
+        setFiltroAtivo(buscaTermo.trim()); //utiliza o termo "atual" do input
     }
 
     function limparBusca() {
         setBuscaTermo("");
-        setFiltroAtivo("");
+        setFiltroAtivo(""); // reseta os filtros (input de pesquisa e select de prioridade)
         setFiltroPrioridade("Todas");
     }
 
@@ -22,7 +22,7 @@ export default function Buscador({
                 type="text"
                 placeholder="Digite um termo para buscar..."
                 value={buscaTermo}
-                onChange={(e) => setBuscaTermo(e.target.value)}
+                onChange={(e) => setBuscaTermo(e.target.value)} // atualiza o estado de termoBusca
                 style={{
                     padding: "0.5rem",
                     borderRadius: "5px",
@@ -34,7 +34,7 @@ export default function Buscador({
 
             <select
                 value={filtroPrioridade}
-                onChange={(e) => setFiltroPrioridade(e.target.value)}
+                onChange={(e) => setFiltroPrioridade(e.target.value)} // filtragem em relação à prioridade
                 style={{
                     padding: "0.5rem",
                     borderRadius: "5px",
