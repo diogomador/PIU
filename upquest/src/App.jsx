@@ -1,4 +1,5 @@
-import "./App.css" // ainda não tem nada
+import "./App.css"
+import logo from './assets/Logotipo.png'; 
 import { useState } from 'react';
 import Conquistas from "./components/Conquistas";
 import Buscador from "./components/Buscador"
@@ -34,7 +35,7 @@ export default function App() {
   function handleSubmit(e) {
     e.preventDefault(); // evita recarregar a página
 
-    if (tarefa.trim() === '') return; // impede tarefas vazias
+    if (tarefa.trim() === '') return; // impede tarefas vazias, o .trim() remove todos os espaços em branco do início e do final da string.
     if (prioridade === '') {
       alert("Por favor, selecione uma prioridade para a tarefa.");
       return;
@@ -91,15 +92,16 @@ export default function App() {
     [novaLista[index], novaLista[novoIndex]] = [novaLista[novoIndex], novaLista[index]];
     setLista(novaLista);
   }
-
+  
   // função para excluir uma tarefa da lista
   function excluirTarefa(index) {
     const novaLista = lista.filter((_, i) => i !== index);
     setLista(novaLista);
   }
-
+  
   return (
     <div>
+      <img src={logo} alt="Logo UpQuest" className="logo" />
       <h2>Lista de Tarefas</h2>
       <form onSubmit={handleSubmit}>
         <label>
@@ -138,21 +140,21 @@ export default function App() {
       <ul>
         {lista.filter((item) => {
           const passaBusca =
-            filtroAtivo === "" || item.nome.toLowerCase().includes(filtroAtivo.toLowerCase());
+          filtroAtivo === "" || item.nome.toLowerCase().includes(filtroAtivo.toLowerCase());
           const passaPrioridade =
-            filtroPrioridade === "Todas" || item.prioridade === filtroPrioridade;
+          filtroPrioridade === "Todas" || item.prioridade === filtroPrioridade;
           return passaBusca && passaPrioridade;
         })
-          .map((item, i) => {
-            // Renderização diferente para lista filtrada
-            if (filtroAtivo !== "") {
-              return (
-                <li key={i}>
+        .map((item, i) => {
+          // Renderização diferente para lista filtrada
+          if (filtroAtivo !== "") {
+            return (
+              <li key={i}>
                   <strong>{item.nome}</strong> - <em>{item.status}</em> - <em>Prioridade: {item.prioridade}</em>
                 </li>
               );
             }
-
+            
             // Renderização completa (sem filtro)
             return (
               <li key={i}>
