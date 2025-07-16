@@ -1,6 +1,6 @@
 import "./App.css"
 import logo from './assets/Logotipo.png'; 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Conquistas from "./components/Conquistas";
 import Buscador from "./components/Buscador"
 
@@ -26,6 +26,7 @@ export default function App() {
   const [lista, setLista] = useState([]); // lista de tarefas atuais
   const [prioridade, setPrioridade] = useState(""); // prioridade da tarefa 
   const [conquistas, setConquistas] = useState([]); // conquistas desbloqueadas
+  const [conquistasMostradas, setConquistasMostradas] = useState([]); // armazena conquistas que já foram mostradas
   const [contadorTotal, setContadorTotal] = useState(0); // total acumulado de tarefas criadas
   const [buscaTermo, setBuscaTermo] = useState(""); //captura do que está sendo inserido no input
   const [filtroAtivo, setFiltroAtivo] = useState(""); //termo do input que será usado de fato
@@ -114,6 +115,25 @@ export default function App() {
     // Atualiza o estado com a nova lista
     setLista(novaLista);
   }
+useEffect(() => {
+  // Se não tiver nenhuma conquista, não faz nada e sai da função
+  if (conquistas.length === 0) return;
+
+  // Pega a última conquista adicionada na lista
+  const ultimaConquista = conquistas[conquistas.length - 1];
+
+  // Se a última conquista já foi mostrada antes, sai da função para evitar alerta repetido
+  if (conquistasMostradas.includes(ultimaConquista)) return;
+
+  // Exibe um alerta para parabenizar o usuário pela nova conquista desbloqueada
+  alert(`Parabéns! Você desbloqueou a conquista: "${ultimaConquista}"`);
+
+  // Atualiza o estado para incluir a última conquista na lista das já mostradas
+  setConquistasMostradas(prev => [...prev, ultimaConquista]);
+  
+// O useEffect roda sempre que as conquistas ou conquistasMostradas mudam
+}, [conquistas, conquistasMostradas]);
+
 
   return (
     <div>
