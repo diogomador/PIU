@@ -1,0 +1,48 @@
+.tabelas-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 200px;
+  text-align: center;
+}
+
+th, td {
+  border: 1px solid lightgray;
+  padding: 10px;
+}
+
+.tabela-nomes {
+  background-color: lightcyan;
+  border: 2px solid teal;
+}
+
+.tabela-usernames {
+  background-color: lavenderblush;
+  border: 2px solid crimson;
+}
+
+.tabela-cidades {
+  background-color: moccasin;
+  border: 2px solid darkorange;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: royalblue;
+}
